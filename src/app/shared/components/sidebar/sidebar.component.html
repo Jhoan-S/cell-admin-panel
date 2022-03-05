@@ -1,0 +1,62 @@
+<!-- <div [@openClose]="isOpen ? 'open' : 'closed'" class="sidebar"> -->
+<div class="sidebar" [ngClass]="{'hide': !isOpen}">
+	<div class="sidebar__header">
+		<div class="sidebar__header__logo">
+			<i class="bx bxl-tux logo"></i>
+			<span>Célula 1222</span>
+		</div>
+
+		<i class="bx bx-menu menu" (click)="toggleSidebar()"></i>
+	</div>
+
+	<hr />
+
+	<ul class="sidebar__body">
+		<li class="sidebar__body__item" routerLinkActive="active">
+			<a [routerLink]="['/dashboard']">
+				<i class="bx bxs-dashboard"></i>
+				<span>Dashboard</span>
+			</a>
+		</li>
+		<li class="sidebar__body__item" routerLinkActive="active">
+			<a [routerLink]="['/asistencia']">
+				<i class="bx bxs-user-check"></i>
+				<span>Asistencia</span>
+			</a>
+		</li>
+		<li class="sidebar__body__item" routerLinkActive="active">
+			<a [routerLink]="['/ofrendas']">
+				<i class="bx bx-money"></i>
+				<span>Ofrendas</span>
+			</a>
+		</li>
+		<li class="sidebar__body__item" routerLinkActive="active">
+			<a [routerLink]="['/gestion']">
+				<i class="bx bx-sitemap"></i>
+				<span>Gestión</span>
+			</a>
+		</li>
+		<li class="sidebar__body__item" routerLinkActive="active">
+			<a [routerLink]="['/settings']">
+				<i class="bx bxs-cog"></i>
+				<span>Settings</span>
+			</a>
+		</li>
+	</ul>
+
+	<!-- <div class="sidebar__footer">
+		<div class="sidebar__footer__info">
+			<img
+				class="sidebar__footer__info__img"
+				src="../../../../assets/img/fabiana.jpg"
+				alt="" />
+		
+			<div class="sidebar__footer__info__subtitles">
+				<span>Fabiana Soldevilla</span>
+				<p>Manager</p>
+			</div>
+		</div>
+		
+		<i class="bx bx-log-out-circle logout"></i>
+	</div> -->
+</div>
